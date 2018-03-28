@@ -1,0 +1,19 @@
+# Aliases
+alias gs='git status'
+alias gitc='git checkout '
+alias br='branch '
+alias git ci='git commit '
+alias go='git checkout '
+alias gb='git branch '
+alias ga='git add '
+alias unstage='git reset HEAD '
+alias gpush='git push origin '
+alias gpushflo='git push --force-with-lease origin '
+alias gpull='git pull origin '
+
+# navigation shorcuts
+alias spark_folder='cd ~/Spark'
+alias example_folder_name='spark_folder; cd example_folder_name'
+
+# fun
+alias git='exit #'
