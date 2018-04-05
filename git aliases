@@ -1,8 +1,9 @@
+.zshrc
+
 # Aliases
 alias gs='git status'
 alias gitc='git checkout '
-alias br='branch '
-alias git ci='git commit '
+alias br='git branch '
 alias go='git checkout '
 alias gb='git branch '
 alias ga='git add '
@@ -15,5 +16,36 @@ alias gpull='git pull origin '
 alias spark_folder='cd ~/Spark'
 alias example_folder_name='spark_folder; cd example_folder_name'
 
+# some more ls aliases
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+
 # fun
 alias git='exit #'
+
+--------------------------------------------------------------------------
+
+.gitconfig
+
+[color]
+	ui = true
+[user]
+	name = Username
+	email = example@gmail.com
+[alias]
+	ci = commit
+	br = branch --sort=-committerdate
+	ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
+	ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+	lnc = log --pretty=format:"%h\\ %s\\ [%cn]"
+	la = "!git config -l | grep alias | cut -c 7-"
+	done = "!f() { git branch | grep "$1" | cut -c 3- | grep -v done | xargs -I{} git branch -m {} done-{}; }; f"
+	r = reset
+	r1 = reset HEAD^
+	r2 = reset HEAD^^
+	rh = reset --hard
+	rh1 = reset HEAD^ --hard
+	rh2 = reset HEAD^^ --hard
+	f = "!git ls-files | grep -i"
+
